@@ -1,132 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>YourProject — Sustainable & Accessible</title>
-  <meta name="description" content="YourProject — an eco-friendly, user-friendly solution designed to reduce environmental impact while remaining simple and inclusive for everyone." />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Weather App</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background: #e0f2f1; 
+            padding: 50px; 
+        }
+        .box { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            display: inline-block; 
+            box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+        }
+        input, button { 
+            padding: 12px; 
+            font-size: 16px; 
+            margin: 5px; 
+            border-radius: 5px; 
+            border: 1px solid #ccc; 
+        }
+        button { 
+            background-color: #00bcd4; 
+            color: white; 
+            cursor: pointer; 
+            font-weight: bold; 
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#">
-        <img src="logo.svg" alt="Project logo" class="logo" />
-        <span class="brand-text">YourProject</span>
-      </a>
 
-      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">
-        <span class="sr-only">Toggle navigation</span>
-        ☰
-      </button>
+    <div class="box">
+        <h2>My Weather App</h2>
+        <input type="text" id="cityInput" placeholder="Enter
 
-      <nav id="main-nav" class="site-nav" aria-label="Main navigation" aria-hidden="true">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#features">Highlights</a></li>
-          <li><a href="#sustainability">Sustainability</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <h1>YourProject</h1>
-          <p class="lead">Eco-friendly solutions that are simple to use — designed for everyone.</p>
-          <p class="subtitle">Sustainable by design • Intuitive for all • Built with accessibility in mind</p>
-
-          <!-- Live weather + thermometer gauge -->
-          <div id="live-weather" class="weather-widget" aria-live="polite" role="status">
-            <div class="weather-left">
-              <strong>Humidity:</strong> <span id="humidity-value">—</span>% <small id="weather-location"></small>
-              <div id="weather-note" class="weather-note" aria-hidden="false"></div>
-            </div>
-
-            <div class="weather-gauge">
-              <div class="thermometer" aria-hidden="true">
-                <div class="thermometer-track">
-                  <div id="thermometer-mercury" class="thermometer-mercury" style="height:0%"></div>
-                </div>
-                <div class="thermometer-bulb"></div>
-              </div>
-              <div class="weather-info">
-                <div id="temp-value" class="temp-value">—°C</div>
-                <div id="weather-emoji" class="weather-emoji" aria-hidden="true">🌤️</div>
-              </div>
-            </div>
-          </div>
-
-          <p class="actions">
-            <a class="btn primary" href="#sustainability">Our Approach</a>
-            <a class="btn outline" href="#contact">Contact Us</a>
-          </p>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="visual-card">Eco • Friendly</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="features" class="container features">
-      <h2>Highlights</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Inclusive by Design</h3>
-          <p>Clear interfaces, large type, strong contrast, and keyboard-friendly navigation make the product usable by people of all abilities.</p>
-        </article>
-        <article class="card">
-          <h3>Low Environmental Impact</h3>
-          <p>Optimized performance and efficient resource use reduce energy consumption and hosting footprint.</p>
-        </article>
-        <article class="card">
-          <h3>Simple Onboarding</h3>
-          <p>Thoughtful defaults, guided steps, and contextual help let new users start quickly without friction.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="sustainability" class="container sustainability">
-      <h2>Sustainability</h2>
-      <p>YourProject reduces environmental impact across the product lifecycle. Key approaches include:</p>
-      <ul>
-        <li><strong>Energy-efficient design:</strong> Minimal client-side work and optimized assets to reduce device and server energy use.</li>
-        <li><strong>Sustainable hosting:</strong> Prefer providers with renewable energy commitments and small carbon footprints.</li>
-        <li><strong>Resource minimization:</strong> Small bundle sizes, efficient images, and lazy-loading to save bandwidth and power.</li>
-        <li><strong>Longevity:</strong> Maintainable architecture and clear documentation to keep the product useful longer with less churn.</li>
-      </ul>
-      <p>Replace these bullets with your specific sustainability claims, certifications, or metrics and I’ll format them for prominence.</p>
-    </section>
-
-    <section id="about" class="container about">
-      <h2>About the Project</h2>
-      <p>
-        YourProject is an eco-friendly and user-friendly solution created to make sustainable choices accessible to everyone.
-        We combine low-energy patterns, approachable interfaces, and inclusive design principles so individuals and organizations
-        can adopt greener technology without sacrificing usability. Whether you're an individual user, a small team, or a large organization,
-        YourProject is built to scale, remain simple, and minimize environmental impact.
-      </p>
-      <p>Provide your detailed project description, key features, or a short tagline and I’ll weave them into this section and create variants for marketing or a downloadable brochure.</p>
-    </section>
-
-    <section id="contact" class="container contact">
-      <h2>Contact</h2>
-      <p>If you'd like to learn more, request a demo, or discuss partnerships, get in touch:</p>
-      <form id="contact-form" novalidate>
-        <label>
-          Name
-          <input type="text" name="name" id="name" required />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" id="email" required />
-        </label>
-        <label>
-          Message
           <textarea name="message" id="message" rows="5" required></textarea>
         </label>
         <div class="form-actions">

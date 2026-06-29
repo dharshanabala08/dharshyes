@@ -4,58 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Weather App</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            background: #e0f2f1; 
-            padding: 50px; 
-        }
-        .box { 
-            background: white; 
-            padding: 30px; 
-            border-radius: 10px; 
-            display: inline-block; 
-            box-shadow: 0 0 15px rgba(0,0,0,0.2); 
-        }
-        input, button { 
-            padding: 12px; 
-            font-size: 16px; 
-            margin: 5px; 
-            border-radius: 5px; 
-            border: 1px solid #ccc; 
-        }
-        button { 
-            background-color: #00bcd4; 
-            color: white; 
-            cursor: pointer; 
-            font-weight: bold; 
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
 
     <div class="box">
         <h2>My Weather App</h2>
-        <input type="text" id="cityInput" placeholder="Enter
+        <input type="text" id="cityInput" placeholder="Enter city name (e.g. Chennai)">
+        <button onclick="getWeather()">Check Weather</button>
 
-          <textarea name="message" id="message" rows="5" required></textarea>
-        </label>
-        <div class="form-actions">
-          <button type="submit" class="btn primary">Send message</button>
-          <span id="form-status" role="status" aria-live="polite"></span>
-        </div>
-      </form>
-      <p class="hint">The form uses a mailto fallback. Edit the contact address in script.js (replace you@example.com) to receive messages by email, or ask me to add a serverless form endpoint.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> YourProject — Sustainable & Accessible.</p>
+        <h3 id="cityName">City Name</h3>
+        <h1 id="temp">-- °C</h1>
+        <p id="desc">Condition</p>
     </div>
-  </footer>
 
-  <script src="script.js" defer></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
